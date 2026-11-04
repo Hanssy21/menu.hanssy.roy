@@ -1,0 +1,249 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f2eb;
+  color: #292929;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.header {
+  background: #202020;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ed8b23;
+}
+
+.header h1 {
+  color: #ffad32;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+.tables-section,
+.menu-section,
+.cart-section,
+.orders-section {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px #0000000d;
+}
+
+h2 {
+  color: #d35400;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 12px 0;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.mesa {
+  padding: 20px 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid transparent;
+}
+
+.mesa span {
+  font-size: 28px;
+}
+
+.mesa.libre {
+  background: #e1f5e5;
+  border-color: #36a35a;
+}
+
+.mesa.ocupada {
+  background: #ffe4e1;
+  border-color: #dc4545;
+}
+
+.mesa.selected {
+  outline: 3px solid #ed8b23;
+  outline-offset: 2px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 15px 0 30px;
+}
+
+.pizza-card {
+  background: #fffaf1;
+  border: 1px solid #eee0ca;
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.pizza-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px #00000015;
+}
+
+.pizza-drawing {
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+}
+
+.pizza-card strong {
+  display: block;
+  color: #d35400;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.pizza-card button,
+.cart-section button {
+  background: #ed8b23;
+  color: white;
+  padding: 11px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pizza-card button:hover,
+.cart-section button:hover {
+  background: #c76a0d;
+}
+
+.cart-section input {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.cart-item button {
+  background: #d94343;
+}
+
+.guardar-btn {
+  background: #238b45 !important;
+  width: 100%;
+  padding: 15px !important;
+  font-size: 16px;
+}
+
+.order-card {
+  border: 1px solid #e6e0d7;
+  background: #fffaf1;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.timer {
+  background: #fff0d8;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  text-align: center;
+  color: #a74d0c;
+}
+
+.timer strong {
+  font-size: 35px;
+}
+
+.tiempo-agotado {
+  color: #d62828;
+}
+
+.entregado-btn {
+  background: #238b45;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+footer {
+  background: #202020;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tables-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .tables-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tables-section,
+  .menu-section,
+  .cart-section,
+  .orders-section {
+    padding: 15px;
+  }
+}
