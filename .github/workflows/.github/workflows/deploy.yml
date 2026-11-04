@@ -16,6 +16,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: pizzeria-react
+
     steps:
       - name: Descargar proyecto
         uses: actions/checkout@v4
@@ -24,7 +28,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Instalar dependencias
         run: npm ci
@@ -38,7 +41,7 @@ jobs:
       - name: Subir archivos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: pizzeria-react/dist
 
       - name: Publicar Pizzería
         uses: actions/deploy-pages@v4
